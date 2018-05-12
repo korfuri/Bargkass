@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="90"
+   height="380"
+   viewBox="0 0 23.812501 100.54167"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="Player.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.6"
+     inkscape:cx="-20.991944"
+     inkscape:cy="77.905829"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:snap-bbox="true"
+     inkscape:snap-page="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:window-width="2517"
+     inkscape:window-height="1385"
+     inkscape:window-x="43"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:measure-start="7.85714,221.607"
+     inkscape:measure-end="41.6071,221.429"
+     showguides="true"
+     inkscape:lockguides="false" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-196.45832)">
+    <path
+       style="opacity:1;vector-effect:none;fill:#f0f0f0;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.48607069;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       d="M 0,196.45831 H 23.8125 V 296.99999 H 0 Z"
+       id="rect817"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="14.422104"
+       y="278.33832"
+       id="text3823"><tspan
+         sodipodi:role="line"
+         id="tspan3821"
+         x="14.422104"
+         y="282.21887"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332" /></text>
+    <rect
+       id="rect896"
+       width="8.3154745"
+       height="91.470238"
+       x="2.1166666"
+       y="200.99403"
+       style="stroke-width:0.11375929;stroke-miterlimit:4;stroke-dasharray:none"
+       ry="1.8898809" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot898"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,-0.04724702,195.2299)"><flowRegion
+         id="flowRegion900"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono'"><rect
+           id="rect902"
+           width="42.142857"
+           height="17.857143"
+           x="47.857143"
+           y="273.57144"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono'" /></flowRegion><flowPara
+         id="flowPara904">Out</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot906"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,-0.04724702,195.2299)"><flowRegion
+         id="flowRegion908"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono'"><rect
+           id="rect910"
+           width="36.42857"
+           height="17.142857"
+           x="53.57143"
+           y="274.28571"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono'" /></flowRegion><flowPara
+         id="flowPara912">Out</flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="11.292039"
+       y="256.65103"
+       id="text834"><tspan
+         sodipodi:role="line"
+         id="tspan832"
+         x="11.292039"
+         y="260.53159"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332"></tspan></text>
+    <rect
+       style="fill:#000000;fill-opacity:0.60784314;stroke-width:0.11559442;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect844"
+       width="7.3705359"
+       height="29.293152"
+       x="15.431434"
+       y="257.87106"
+       ry="2.5252728" />
+    <g
+       aria-label="L"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="text850"
+       transform="translate(0,-0.85044643)">
+      <path
+         d="m 12.99736,263.99408 v -3.02204 h 0.38654 v 2.67891 h 1.312581 v 0.34313 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';fill-rule:nonzero;stroke:#000000;stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path4627"
+         inkscape:connector-curvature="0" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="14.319342"
+       y="288.59003"
+       id="text3823-3"><tspan
+         sodipodi:role="line"
+         id="tspan3821-3"
+         x="14.319342"
+         y="292.47058"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332" /></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot898-4"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,-0.15000959,205.48161)"><flowRegion
+         id="flowRegion900-4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono'"><rect
+           id="rect902-3"
+           width="42.142857"
+           height="17.857143"
+           x="47.857143"
+           y="273.57144"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono'" /></flowRegion><flowPara
+         id="flowPara904-9">Out</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot906-7"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,-0.15000959,205.48161)"><flowRegion
+         id="flowRegion908-2"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono'"><rect
+           id="rect910-5"
+           width="36.42857"
+           height="17.142857"
+           x="53.57143"
+           y="274.28571"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono'" /></flowRegion><flowPara
+         id="flowPara912-8">Out</flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="11.189276"
+       y="266.90274"
+       id="text834-9"><tspan
+         sodipodi:role="line"
+         id="tspan832-0"
+         x="11.189276"
+         y="270.78329"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332" /></text>
+    <g
+       aria-label="M"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
+       id="text850-2"
+       transform="translate(0,-0.04724962)">
+      <path
+         d="m 13.48932,274.04736 -0.574642,-2.64583 h -0.01654 q 0.03721,0.54984 0.03721,0.83923 v 1.8066 h -0.312126 v -3.02203 h 0.510563 l 0.51263,2.46393 h 0.0124 l 0.516764,-2.46393 h 0.520898 v 3.02203 h -0.316259 v -1.83348 q 0,-0.21084 0.02894,-0.80822 h -0.01654 l -0.584977,2.6417 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
+         id="path4630"
+         inkscape:connector-curvature="0" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="14.366589"
+       y="298.65363"
+       id="text3823-7"><tspan
+         sodipodi:role="line"
+         id="tspan3821-6"
+         x="14.366589"
+         y="302.53418"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332" /></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot898-5"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,-0.10276252,215.54523)"><flowRegion
+         id="flowRegion900-7"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono'"><rect
+           id="rect902-1"
+           width="42.142857"
+           height="17.857143"
+           x="47.857143"
+           y="273.57144"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono'" /></flowRegion><flowPara
+         id="flowPara904-3">Out</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot906-3"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,-0.10276252,215.54523)"><flowRegion
+         id="flowRegion908-3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono'"><rect
+           id="rect910-8"
+           width="36.42857"
+           height="17.142857"
+           x="53.57143"
+           y="274.28571"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono'" /></flowRegion><flowPara
+         id="flowPara912-5">Out</flowPara></flowRoot>    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="11.236524"
+       y="276.96634"
+       id="text834-1"><tspan
+         sodipodi:role="line"
+         id="tspan832-08"
+         x="11.236524"
+         y="280.84689"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke-width:0.26458332" /></text>
+    <g
+       aria-label="R"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
+       id="text850-7"
+       transform="translate(0,0.75595238)">
+      <path
+         d="m 13.046969,282.85214 v 1.24851 H 12.66043 v -3.02204 h 0.737939 q 1.07487,0 1.07487,0.85783 0,0.59324 -0.59738,0.81028 l 0.820622,1.35393 h -0.452685 l -0.72347,-1.24851 z m 0,-0.32659 h 0.338998 q 0.353467,0 0.520898,-0.13643 0.167432,-0.13642 0.167432,-0.43408 0,-0.29145 -0.165365,-0.41961 -0.165364,-0.12816 -0.5333,-0.12816 h -0.328663 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
+         id="path4633"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>

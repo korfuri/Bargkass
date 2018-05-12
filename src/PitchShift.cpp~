@@ -1,0 +1,20 @@
+#include "Bargkass.hpp"
+
+class PitchShift : public Module {
+  enum ParamIds {
+    SHIFT_PARAM,
+    NUM_PARAMS
+  };
+  enum InputIds {
+    AUDIO_INPUT,
+    NUM_INPUTS
+  };
+  enum OutputIds {
+    AUDIO_OUTPUT,
+    NUM_OUTPUTS
+  };
+  enum LightIds {
+    NUM_LIGHTS
+  };
+
+};

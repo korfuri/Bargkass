@@ -1,0 +1,109 @@
+#include "Bargkass.hpp"
+#include <algorithm>
+#include <iostream>
+
+// Damn compiler with no C++17 support
+namespace std {
+  float clamp(float v, float min, float max) {
+    if (v < min) return min;
+    if (v > max) return max;
+    return v;
+  }
+}
+
+class Operator : public Module {
+public:
+  enum ParamIds {
+    ADJUST_PARAM,
+    NUM_PARAMS
+  };
+  enum InputIds {
+    VOCT_INPUT,
+    NUM_INPUTS
+  };
+  enum OutputIds {
+    VOCT_OUTPUT,
+    NUM_OUTPUTS
+  };
+  enum LightIds {
+    // ENVELOPE_ACTIVE_LIGHT, // TODO
+    NUM_LIGHTS
+  };
+
+  // Maybe the baseFreq should represent C4 instead of A4? simplifies calculating `freq` in ::step()
+  static constexpr const double A440 = 2.4494983453127;
+  static constexpr const double C4 = 261.626;
+  
+  Operator() : Module(NUM_PARAMS, NUM_INPUTS, NUM_OUTPUTS, NUM_LIGHTS) {}
+  ~Operator() {}
+  
+  void step() override;
+private:
+  double phase_;
+};
+
+void Operator::step() {
+  float fm_amount = (params[FM_PARAM].value / 100.f)
+    + (params[FM_CV_ATTV_PARAM].value * std::clamp(inputs[FM_CV_INPUT].value, -5.f, 5.f) / 500.f);
+  // float baseFreq = inputs[BASE_FREQ_INPUT].active
+  //   ? std::clamp(inputs[BASE_FREQ_INPUT].value, -5.f, 5.f)
+  //   : A440;
+  float pitch = 0.f
+    //+ std::clamp(inputs[BASE_FREQ_INPUT].value, -5.f, 5.f);
+    + std::clamp(inputs[VOCT_INPUT].value, -5.f, 5.f)
+    + std::clamp(inputs[FM_INPUT].value, -5.f, 5.f) * fm_amount // need a constant here - to consider with the range of FM_PARAM
+    + params[DETUNE_PARAM].value / 1000.f // The knob is +/-100, convert to +/-0.1V
+    //+ params[DETUNE_CV_ATTV_PARAM].value * std::clamp(inputs[DETUNE_CV_INPUT].value, -5.f, 5.f) // need a constant here - 0.2f would allow +/-1 semitone
+    ;
+  float envelope = inputs[ENVELOPE_INPUT].active
+    ? std::clamp(inputs[ENVELOPE_INPUT].value, 0.f, 10.f) / 10.f
+    : 1.f;
+
+  float freq = C4 * powf(2.0f, pitch);
+  
+  // Passthroughs
+  outputs[BASE_FREQ_OUTPUT].value = inputs[BASE_FREQ_INPUT].value;
+  outputs[VOCT_OUTPUT].value = inputs[VOCT_INPUT].value;
+  outputs[VOCT_P1_OUTPUT].value = inputs[VOCT_INPUT].value + 1.0f;
+  outputs[VOCT_P2_OUTPUT].value = inputs[VOCT_INPUT].value + 2.0f;
+  outputs[VOCT_M1_OUTPUT].value = inputs[VOCT_INPUT].value - 1.0f;
+
+  // Calculate the phase shift we're at. All functions are cyclical
+  // with period 1 so we constrain to [0;1.0] here (and multiply by 2pi
+  // later for sines)
+  phase_ += freq * engineGetSampleTime();
+  if (phase_ > 1.0f) {
+    phase_ -= 1.0f;
+  }
+
+  outputs[WAVE1_OUTPUT].value = sin(phase_ * 2 * M_PI) * 5.0f * envelope;
+  outputs[WAVE2_OUTPUT].value = (phase_ - 0.5f) * 5.0f * envelope;
+}
+
+struct OperatorWidget : ModuleWidget {
+  OperatorWidget(Operator *module) : ModuleWidget(module) {
+    setPanel(SVG::load(assetPlugin(plugin, "res/Scope.svg"))); // TODO
+
+    addChild(Widget::create<ScrewSilver>(Vec(RACK_GRID_WIDTH, 0)));
+    addChild(Widget::create<ScrewSilver>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, 0)));
+    addChild(Widget::create<ScrewSilver>(Vec(RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
+    addChild(Widget::create<ScrewSilver>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
+
+    addParam(ParamWidget::create<Davies1900hBlackKnob>(Vec(28, 87), module, Operator::FM_PARAM, 0.0f, 100.0f, 0.0f));
+    addParam(ParamWidget::create<Davies1900hBlackKnob>(Vec(60, 87), module, Operator::FM_CV_ATTV_PARAM, 0.0f, 100.0f, 0.0f));
+    addParam(ParamWidget::create<Davies1900hBlackKnob>(Vec(92, 87), module, Operator::DETUNE_PARAM, -100.0f, 100.0f, 0.0f));
+
+    addInput(Port::create<PJ301MPort>(Vec(11, 276), Port::INPUT, module, Operator::BASE_FREQ_INPUT));
+    addInput(Port::create<PJ301MPort>(Vec(45, 276), Port::INPUT, module, Operator::VOCT_INPUT));
+    addInput(Port::create<PJ301MPort>(Vec(80, 276), Port::INPUT, module, Operator::FM_INPUT));
+    addInput(Port::create<PJ301MPort>(Vec(114, 276), Port::INPUT, module, Operator::FM_CV_INPUT));
+    addInput(Port::create<PJ301MPort>(Vec(148, 276), Port::INPUT, module, Operator::ENVELOPE_INPUT));
+
+    addOutput(Port::create<PJ301MPort>(Vec(11, 320), Port::OUTPUT, module, Operator::BASE_FREQ_OUTPUT));
+    addOutput(Port::create<PJ301MPort>(Vec(45, 320), Port::OUTPUT, module, Operator::VOCT_OUTPUT));
+    addOutput(Port::create<PJ301MPort>(Vec(80, 320), Port::OUTPUT, module, Operator::WAVE1_OUTPUT));
+    addOutput(Port::create<PJ301MPort>(Vec(114, 320), Port::OUTPUT, module, Operator::WAVE2_OUTPUT));
+  }
+};
+
+Model *modelOperator = Model::create<Operator, OperatorWidget>("Bargkass", "Operator", "FM Operator", OSCILLATOR_TAG);
