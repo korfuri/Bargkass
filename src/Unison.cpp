@@ -1,4 +1,5 @@
 #include "Bargkass.hpp"
+#include "dsp/digital.hpp"
 #include <random>
 
 class Unison : public Module {
@@ -77,30 +78,37 @@ private:
 };
 
 void Unison::step() {
-  float cv = inputs[CV_INPUT].value;
+  // Compute our detune factor
   float detune = params[DETUNE_PARAM].value / 100.f;
   if (inputs[DETUNE_INPUT].active) {
     detune += clamp(inputs[DETUNE_INPUT].value, -5.f, 5.f) * params[DETUNE_ATTV_PARAM].value;
   }
+
+  // Compute whether our gate input is high or low.
   gateIn_.process(rescale(inputs[GATE_INPUT].value, 0.1f, 1.7f, 0.f, 1.f));
   float gateIn = gateIn_.isHigh() ? 5.0f : 0.0f;
   lights[GATE_IN_LIGHT].value = gateIn;
 
-  float delay = params[DELAY_PARAM].value * (engineGetSampleRate() / 1000.f);
+  // Compute the delay
+  float delay = params[DELAY_PARAM].value;
   if (inputs[DELAY_INPUT].active) {
     delay += clamp(inputs[DELAY_INPUT].value, 0.f, 10.f) * params[DELAY_ATTV_PARAM].value;
   }
+  // Normalize the delay by the current sample rate.
+  delay *= (engineGetSampleRate() / 1000.f);
 
+  // From our expected delay, compute a Bernoulli distribution. This
+  // does a weighted coin flip at each tick for each output, if the
+  // coin flip is positive the output is set to match the current gate
+  // and CV (detuned).
   double p = 1./delay;
   std::bernoulli_distribution d(p);
-
+  float cv = inputs[CV_INPUT].value;
   for (int n = 0; n < 12; ++n) {
     float expected_tune = cv + (6 - n) * detune;
-    if (outputs[(int)GATE1_OUTPUT + n].value != gateIn || outputs[(int)CV1_OUTPUT + n].value != expected_tune) {
-      if (d(mt_)) {
-	outputs[(int)GATE1_OUTPUT + n].value = gateIn;
-	outputs[(int)CV1_OUTPUT + n].value = expected_tune;
-      }
+    if (d(mt_)) {
+      outputs[(int)GATE1_OUTPUT + n].value = gateIn;
+      outputs[(int)CV1_OUTPUT + n].value = expected_tune;
     }
     lights[(int)GATE1_LIGHT + n].value = outputs[(int)GATE1_OUTPUT + n].value;
   }
