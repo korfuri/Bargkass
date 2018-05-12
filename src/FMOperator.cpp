@@ -3,33 +3,31 @@
 
 class Operator : public Module {
 public:
-  // TODO: reorder ports and params here, when portlist is "final"
   enum ParamIds {
-    unused_param0,
-    MODE_PARAM, // Linear (0) or exponential (1) FM?
-    FM_PARAM, // How much FM. Range: 0-100, scaled down to 0.0-1.0
-    FM_CV_ATTV_PARAM, // Attenuverter for FM_CV_INPUT. Range +/-100, scaled down to +/-1
-    DETUNE_PARAM, // Detune parameter in cents, -50 to +50
     DETUNE_CV_ATTV_PARAM, // Attenuverter for DETUNE_CV_INPUT. Range -100 to +100 cents
+    DETUNE_PARAM, // Detune parameter in cents, -50 to +50
+    FM_CV_ATTV_PARAM, // Attenuverter for FM_CV_INPUT. Range +/-100, scaled down to +/-1
+    FM_PARAM, // How much FM. Range: 0-100, scaled down to 0.0-1.0
+    MODE_PARAM, // Linear (0) or exponential (1) FM?
     OCTAVE_PARAM, // Octave adjuster, -5 to +5 octaves
     NUM_PARAMS
   };
   enum InputIds {
-    GLOBAL_DETUNE_INPUT, // V/oct, base frequency offset from C4
-    VOCT1_INPUT, // V/oct of the note 1 being played.
-    FM1_INPUT, // Bimodal wave (-5/+5), carrier frequency.
-    FM_CV_INPUT, // Bimodal CV (-5/+5), FM control.
     DETUNE_CV_INPUT, // Bimodal CV (-5/+5), detune control.
     ENVELOPE1_INPUT, // Unimodal (0/+10V) envelope control
-    VOCT2_INPUT, // V/oct of the note 2 being played.
-    VOCT3_INPUT, // V/oct of the note 3 being played.
-    VOCT4_INPUT, // V/oct of the note 4 being played.
     ENVELOPE2_INPUT, // Unimodal (0/+10V) envelope control
     ENVELOPE3_INPUT, // Unimodal (0/+10V) envelope control
     ENVELOPE4_INPUT, // Unimodal (0/+10V) envelope control
+    FM1_INPUT, // Bimodal wave (-5/+5), carrier frequency.
     FM2_INPUT, // Bimodal wave (-5/+5), carrier frequency.
     FM3_INPUT, // Bimodal wave (-5/+5), carrier frequency.
     FM4_INPUT, // Bimodal wave (-5/+5), carrier frequency.
+    FM_CV_INPUT, // Bimodal CV (-5/+5), FM control.
+    GLOBAL_DETUNE_INPUT, // V/oct, base frequency offset from C4
+    VOCT1_INPUT, // V/oct of the note 1 being played.
+    VOCT2_INPUT, // V/oct of the note 2 being played.
+    VOCT3_INPUT, // V/oct of the note 3 being played.
+    VOCT4_INPUT, // V/oct of the note 4 being played.
     NUM_INPUTS
   };
   enum OutputIds {
@@ -246,4 +244,4 @@ struct OperatorWidget : ModuleWidget {
   }
 };
 
-Model *modelOperator = Model::create<Operator, OperatorWidget>("Bargkass", "Operator", "FM Operator", OSCILLATOR_TAG);
+Model *modelOperator = Model::create<Operator, OperatorWidget>("Bargkass", "Operator", "FM Operator", OSCILLATOR_TAG, QUAD_TAG);
