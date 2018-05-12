@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="15mm"
+   height="15mm"
+   viewBox="0 0 15 15"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="FMOperator_mode.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="11.313709"
+     inkscape:cx="4.7524348"
+     inkscape:cy="31.206977"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="2517"
+     inkscape:window-height="1385"
+     inkscape:window-x="43"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1368" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-282)">
+    <rect
+       style="fill:#1a1800;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.34687328;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect1372"
+       width="14.998568"
+       height="14.997534"
+       x="0.0010335286"
+       y="282.00143"
+       ry="2.9996881" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.14762974px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f1be00;fill-opacity:1;stroke:none;stroke-width:0.38422686"
+       x="1.2000352"
+       y="316.98495"
+       id="text1395"
+       transform="scale(1.1015547,0.90780787)"><tspan
+         sodipodi:role="line"
+         id="tspan1393"
+         x="1.2000352"
+         y="316.98495"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Mono';-inkscape-font-specification:'Liberation Mono';fill:#f1be00;fill-opacity:1;stroke-width:0.38422686">EXP</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.14762974px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#644f00;fill-opacity:1;stroke:none;stroke-width:0.38422686;"
+       x="1.1670157"
+       y="324.88492"
+       id="text1395-4"
+       transform="scale(1.1015547,0.90780785)"><tspan
+         sodipodi:role="line"
+         id="tspan1393-6"
+         x="1.1670157"
+         y="324.88492"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Liberation Mono';-inkscape-font-specification:'Liberation Mono';fill:#644f00;fill-opacity:1;stroke-width:0.38422686;">LIN</tspan></text>
+  </g>
+</svg>
