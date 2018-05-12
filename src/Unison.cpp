@@ -1,5 +1,4 @@
 #include "Bargkass.hpp"
-#include "AutoUI.hpp"
 #include <random>
 
 class Unison : public Module {
