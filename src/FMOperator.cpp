@@ -1,16 +1,5 @@
 #include "Bargkass.hpp"
-#include "AutoUI.hpp"
 #include <algorithm>
-#include <iostream>
-
-// Damn compiler with no C++17 support
-namespace std {
-  inline float clamp(float v, float min, float max) {
-    if (v < min) return min;
-    if (v > max) return max;
-    return v;
-  }
-}
 
 class Operator : public Module {
 public:
@@ -72,33 +61,33 @@ private:
 };
 
 void Operator::step() {
-  float detune = std::clamp(inputs[GLOBAL_DETUNE_INPUT].value, -5.f, 5.f)
+  float detune = clamp(inputs[GLOBAL_DETUNE_INPUT].value, -5.f, 5.f)
     + params[OCTAVE_PARAM].value
     + params[DETUNE_PARAM].value / 100.f // The knob is +/-100, convert to +/-1V
-    + params[DETUNE_CV_ATTV_PARAM].value * std::clamp(inputs[DETUNE_CV_INPUT].value, -5.f, 5.f) / 5.f / 12.f // convert +-5V to +-1semitone
+    + params[DETUNE_CV_ATTV_PARAM].value * clamp(inputs[DETUNE_CV_INPUT].value, -5.f, 5.f) / 5.f / 12.f // convert +-5V to +-1semitone
     ;
   float fm_amount = (params[FM_PARAM].value / 100.f)
-    + (params[FM_CV_ATTV_PARAM].value * std::clamp(inputs[FM_CV_INPUT].value, 0.f, 10.f) / 500.f);
+    + (params[FM_CV_ATTV_PARAM].value * clamp(inputs[FM_CV_INPUT].value, 0.f, 10.f) / 500.f);
   int mode = (int)params[MODE_PARAM].value;  // 1 for exponential, 0 for linear
   float pitch[4] = {
     // To use linear FM here we should log() the FM offset. Easier said than done since it can be negative. 
-    detune + (mode ? std::clamp(inputs[FM1_INPUT].value, -5.f, 5.f) * fm_amount : 0.f) + std::clamp(inputs[VOCT1_INPUT].value, -5.f, 5.f),
-    detune + (mode ? std::clamp(inputs[FM2_INPUT].value, -5.f, 5.f) * fm_amount : 0.f) + std::clamp(inputs[VOCT2_INPUT].value, -5.f, 5.f),
-    detune + (mode ? std::clamp(inputs[FM3_INPUT].value, -5.f, 5.f) * fm_amount : 0.f) + std::clamp(inputs[VOCT3_INPUT].value, -5.f, 5.f),
-    detune + (mode ? std::clamp(inputs[FM4_INPUT].value, -5.f, 5.f) * fm_amount : 0.f) + std::clamp(inputs[VOCT4_INPUT].value, -5.f, 5.f),
+    detune + (mode ? clamp(inputs[FM1_INPUT].value, -5.f, 5.f) * fm_amount : 0.f) + clamp(inputs[VOCT1_INPUT].value, -5.f, 5.f),
+    detune + (mode ? clamp(inputs[FM2_INPUT].value, -5.f, 5.f) * fm_amount : 0.f) + clamp(inputs[VOCT2_INPUT].value, -5.f, 5.f),
+    detune + (mode ? clamp(inputs[FM3_INPUT].value, -5.f, 5.f) * fm_amount : 0.f) + clamp(inputs[VOCT3_INPUT].value, -5.f, 5.f),
+    detune + (mode ? clamp(inputs[FM4_INPUT].value, -5.f, 5.f) * fm_amount : 0.f) + clamp(inputs[VOCT4_INPUT].value, -5.f, 5.f),
   };
   float envelope[4] = {
-    inputs[ENVELOPE1_INPUT].active ? std::clamp(inputs[ENVELOPE1_INPUT].value, 0.f, 10.f) / 10.f : 1.f,
-    inputs[ENVELOPE2_INPUT].active ? std::clamp(inputs[ENVELOPE2_INPUT].value, 0.f, 10.f) / 10.f : 1.f,
-    inputs[ENVELOPE3_INPUT].active ? std::clamp(inputs[ENVELOPE3_INPUT].value, 0.f, 10.f) / 10.f : 1.f,
-    inputs[ENVELOPE4_INPUT].active ? std::clamp(inputs[ENVELOPE4_INPUT].value, 0.f, 10.f) / 10.f : 1.f,
+    inputs[ENVELOPE1_INPUT].active ? clamp(inputs[ENVELOPE1_INPUT].value, 0.f, 10.f) / 10.f : 1.f,
+    inputs[ENVELOPE2_INPUT].active ? clamp(inputs[ENVELOPE2_INPUT].value, 0.f, 10.f) / 10.f : 1.f,
+    inputs[ENVELOPE3_INPUT].active ? clamp(inputs[ENVELOPE3_INPUT].value, 0.f, 10.f) / 10.f : 1.f,
+    inputs[ENVELOPE4_INPUT].active ? clamp(inputs[ENVELOPE4_INPUT].value, 0.f, 10.f) / 10.f : 1.f,
   };
 
   float freq[4] = {
-    C4 * powf(2.0f, pitch[0]) + (mode ? 0.f : fm_amount * std::clamp(inputs[FM1_INPUT].value, -5.f, 5.f) * 400.f),
-    C4 * powf(2.0f, pitch[1]) + (mode ? 0.f : fm_amount * std::clamp(inputs[FM2_INPUT].value, -5.f, 5.f) * 400.f),
-    C4 * powf(2.0f, pitch[2]) + (mode ? 0.f : fm_amount * std::clamp(inputs[FM3_INPUT].value, -5.f, 5.f) * 400.f),
-    C4 * powf(2.0f, pitch[3]) + (mode ? 0.f : fm_amount * std::clamp(inputs[FM4_INPUT].value, -5.f, 5.f) * 400.f),
+    C4 * powf(2.0f, pitch[0]) + (mode ? 0.f : fm_amount * clamp(inputs[FM1_INPUT].value, -5.f, 5.f) * 400.f),
+    C4 * powf(2.0f, pitch[1]) + (mode ? 0.f : fm_amount * clamp(inputs[FM2_INPUT].value, -5.f, 5.f) * 400.f),
+    C4 * powf(2.0f, pitch[2]) + (mode ? 0.f : fm_amount * clamp(inputs[FM3_INPUT].value, -5.f, 5.f) * 400.f),
+    C4 * powf(2.0f, pitch[3]) + (mode ? 0.f : fm_amount * clamp(inputs[FM4_INPUT].value, -5.f, 5.f) * 400.f),
   };
   
   // Passthroughs
