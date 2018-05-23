@@ -55,3 +55,13 @@ protected:
   virtual void applyStyle(NVGcontext* vg) override;
   virtual void applyScissor(NVGcontext *vg) override;
 };
+
+struct TextOutputsModule {
+  TextOutputsModule(unsigned int num_texts) : text_outputs(num_texts) {}
+
+  struct TextOutput {
+    std::string value = "";
+  };
+
+  std::vector<TextOutput> text_outputs;
+};
